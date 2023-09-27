@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './variables';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: $bgMain;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+// svg{
+//   // background: #000;
+// }
+ul {
+  list-style: none;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  position: relative;
+
+  .epiphanyContainer {
+    background: $secondBg;
+    height: 100vh;
+width: 100%;
+@media (max-width: 1042px) {
+ height: 80vh;
+   }
+   @media (max-width: 600px) {
+    height: 100vh;
+        }
+    .container {
+      width: 85%;
+      margin: auto;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 100%;
+      gap: 40px;
+      position: relative;
+      @media (max-width: 600px) {
+      flex-direction: column;
+          }
+  @media (max-width: 1042px) {
+    width: 100%;
+    padding: 1rem ;
+     }
+
+      .left {
+        width: 350px;
+      height: 90%;
+      opacity:0;
+      scale:0.8;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(238deg, rgba(0, 0, 0, 0.463) 11.01%, rgba(0, 0, 0, 0.30) 67.21%, rgba(0, 0, 0, 0) 102.34%);
+        
+        img {
+          width: 100%;
+          height: 100%;
+          
+          object-fit: contain;
+          transform: scale(1.2) scaleX(-1);
+          object-position: top;
+          position: absolute;
+          left: 10%;
+          @media (max-width: 1042px) {
+           aspect-ratio: 1/1;
+           transform: scale(1) scaleX(-1);
+           object-fit: cover;
+             }
+        }
+      }
+
+      .right {
+        height: fit-content;
+      
+        font-size: 15px;
+        line-height: 25px;
+      margin-top: 5rem;
+        font-weight: lighter;
+        width: 400px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+        .roundedPill {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background-color: #E1E1E1;
+          border: solid 6px #F1F1F1;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: -1px 0px 3px 1px #cecece inset;
+          .svg{
+  width: 70%;
+          }
+
+        }
+        .text{
+          opacity:0;
+          scale:0.8;
+          
+        }
+      }
+
+      .epip {
+        position: absolute;
+        left: 20%;
+        z-index: 30;
+        top: 10%;
+        font-size: 70px;
+        font-weight: 900;
+        color: $bgMain;
+        opacity:0;
+        scale:0.8;
+        @media (max-width: 600px) {
+        top: 30%;
+        font-size: 50px;
+        left: 10%;
+              }
+      }
+    }
+
+
+  }
+
+  
+  .magicalContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+@media (max-width: 1200px) {
+ height: fit-content;
+ padding: 4rem 0;
+  
+              }
+  .container{
+    width: 85%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    @media (max-width: 1200px) {
+   width: 100%;
+   padding: 1rem;
+              }
+    .textHeader{
+      font-size: 70px;
+      font-weight: 900;
+      color:$maintext;
+      opacity:0;
+      scale:0.8;
+    }
+    .right{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .text{
+        width: 400px;
+        line-height: 30px;
+        opacity:0;
+        scale:0.8;
+      }
+    }
+    
+  }
+
+.lastImage{
+  position: absolute;
+  height: 100%;
+  width: 400px;
+  top: -20%;
+  right: 0;
+  transform: rotate(-2deg);
+  object-fit: cover;
+  scale: (1.4);
+    //  display: none;
+    @media (max-width: 1000px) {
+  width: 300px;
+  height: auto;
+              }
+              @media (max-width: 800px) {
+                width: 250px;
+                top: -15%;
+                height: auto;
+                z-index: -1;
+                            }
+                            @media (max-width: 800px) {
+                              width: 200px;
+                              top: -15%;
+                              height: auto;
+                                          }
+}
+// .rotate-z{
+//   transform: rotateZ(5deg);
+// }
+  }
+}
